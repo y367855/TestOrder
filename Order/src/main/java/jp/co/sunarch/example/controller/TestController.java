@@ -12,4 +12,14 @@ public class TestController {
 		model.addAttribute("message", "Hello World!!");
 		return "index";
 	}
+	
+	@GetMapping("/top")
+	public String top(Model model) {
+		return "top";
+	}
+	
+	@GetMapping("/menu")
+	public String menu(Model model) {
+		return "menu";
+	}
 }
