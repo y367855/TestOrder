@@ -4,29 +4,39 @@
 <link th:href="@{/content.css}" rel="stylesheet">
 <title>メニュー表示画面</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-</head>
 
+<script type="text/javascript">
+	function OnButtonClick() {
+		target = document.getElementById("name");
+		target2 = document.getElementById("price");
+	}
+</script>
+</head>
 <body>
 	<h1>メニュー表示画面</h1>
 	<button type="button" class="top" onclick="location.href='/top'">トップへ戻る</button>
 	<form>
-	<table>
-		<tbody>
-			<tr>
-			<tr class="menu" th:each="menu : ${menuList}" th:object="${menu}">
-				<td class="center" th:text="*{productName}"></td>
-				<td class="center" th:text="*{productPrice}"></td>
-				<td><select name="example">
-						<option>1</option>
-						<option>2</option>
-						<option>3</option>
-						<option>4</option>
-						<option>5</option>
-				</select></td>
-				<td><input type = "submit" class="order" value = "注文する"></td>
-			</tr>
-		</tbody>
-	</table>
+		<table>
+			<tbody>
+				<tr>
+				<tr class="menu" th:each="menu : ${menuList}" th:object="${menu}">
+					<td class="center" th:text="*{productName}" id="name"></td>
+					<td class="center" th:text="*{productPrice}" id="price"></td>
+					<td><select name="example">
+							<option>0</option>
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+							<option>5</option>
+					</select></td>
+					<td><input type="submit" class="order" value="注文する"
+						onClick="OnButtonClick();"></td>
+				</tr>
+			</tbody>
+		</table>
+		<button type="button" class="cart" onclick="location.href='/cart'">カート確認</button>
+		<button type="button" class="cash" onclick="location.href='/confirm'">会計へ</button>
 	</form>
 </body>
 </html>

@@ -42,4 +42,31 @@ public class TestController {
 		 model.addAttribute("menuList", menuList);
 		return "menu";
 	}
+	
+	/**
+	   * カート確認画面を表示
+	   * @return カート確認画面のHTML
+	   */
+	@GetMapping("/cart")
+	public String cart(Model model) {
+		return "cart";
+	}
+	
+	/**
+	   * 確認画面を表示
+	   * @return 確認画面のHTML
+	   */
+	@GetMapping("/confirm")
+	public String confirm(Model model) {
+		return "confirm";
+	}
+	
+	/**
+	   * 会計画面を表示
+	   * @return 会計画面のHTML
+	   */
+	@GetMapping("/cash")
+	public String cash(Model model) {
+		return "cash";
+	}
 }
