@@ -5,8 +5,28 @@
 <title>メニュー表示画面</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
-<h1>メニュー表示画面</h1>
+
 <body>
-	
+	<h1>メニュー表示画面</h1>
+	<button type="button" class="top" onclick="location.href='/top'">トップへ戻る</button>
+	<form>
+	<table>
+		<tbody>
+			<tr>
+			<tr class="menu" th:each="menu : ${menuList}" th:object="${menu}">
+				<td class="center" th:text="*{productName}"></td>
+				<td class="center" th:text="*{productPrice}"></td>
+				<td><select name="example">
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+				</select></td>
+				<td><input type = "submit" class="order" value = "注文する"></td>
+			</tr>
+		</tbody>
+	</table>
+	</form>
 </body>
 </html>

@@ -1,17 +1,47 @@
 .menuButton {
-    border: 0;
-    line-height: 2.5;
-    padding: 0 20px;
-    font-size: 1rem;
-    text-align: center;
-    color: #fff;
-    text-shadow: 1px 1px 1px #000;
-    border-radius: 10px;
-    background-color: rgba(220, 0, 0, 1);
-    background-image: linear-gradient(to top left,
-                                      rgba(0, 0, 0, .2),
-                                      rgba(0, 0, 0, .2) 30%,
-                                      rgba(0, 0, 0, 0));
-    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
-                inset -2px -2px 3px rgba(0, 0, 0, .6);
+	border: 0;
+	line-height: 2.5;
+	padding: 20px 20px;
+	font-size: 1rem;
+	text-align: center;
+	color: #fff;
+	text-shadow: 1px 1px 1px #000;
+	border-radius: 10px;
+	background-color: rgba(220, 0, 0, 1);
+	background-image: linear-gradient(to top left, rgba(0, 0, 0, .2),
+		rgba(0, 0, 0, .2) 30%, rgba(0, 0, 0, 0));
+	box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6), inset -2px -2px
+		3px rgba(0, 0, 0, .6);
+}
+
+.top {
+	position: absolute;
+	right: 1150px;
+	top: 30px;
+}
+
+.menu {
+	display: inline-block;
+}
+
+td {
+	border: 1px #808080 solid;
+}
+
+table {
+	border-collapse: collapse;
+	font-size: 12px;
+}
+
+table th, table td {
+	border: 1px solid;
+	padding: 6px;
+}
+
+.center {
+	text-align: center;
+}
+
+.order {
+	border: 1px #808080 solid;
 }
